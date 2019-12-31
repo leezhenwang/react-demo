@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import index from './page/index/index.js';
+import MyHeader from './component/myheader/myheader.js';
+import test from './page/test/test.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      
+    }
+  }
+
+  render() {
+    return (
+      <div className="index-container">
+        <MyHeader></MyHeader>
+        <Route exact path="/" component={index}></Route>
+        <Route exact path="/test/:id" component={test}></Route>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
