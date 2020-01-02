@@ -17,11 +17,13 @@ class test extends Component {
     console.log(this.props.match.params.id);
   }
   render() {
+    const { testState } = this.props;
+    const {isPartnerModalShow} = testState
     return (
       <div className="test-container">
         这里是测试页
         <Customer></Customer>
-        <PartnerModal></PartnerModal>
+        {isPartnerModalShow ? <PartnerModal></PartnerModal> : ''}
       </div>
     )
   }
@@ -30,7 +32,7 @@ class test extends Component {
 function mapStateToProps(state) {
   // console.log('state', state);
 	return {
-		tetState: state.testState,
+		testState: state.testState,
 	};
 }
 

@@ -12,13 +12,19 @@ class Customer extends Component {
       
     }
   }
-
+  toggleTestModal= ()=>{
+    console.log(this.props)
+    this.props.actions.togglePartnerModal(true)
+  }
   render() {
+    const {match} = this.props;
+    const {path} = match;
+    console.log(path)
     return (
       <div>
-        <div className="customer-partner">
+        {path === '/test/:id' ? <div className="customer-partner" onClick={()=> this.toggleTestModal()}>
           合作伙伴
-        </div>
+        </div> : ''}
         <div className="customer-backToTop">
           返回顶部
         </div>
@@ -33,7 +39,7 @@ class Customer extends Component {
 function mapStateToProps(state) {
 	// console.log('state', state);
 	return {
-		fiveGChannelState: state.fiveGChannelState,
+		testState: state.testState,
 	};
 }
 
