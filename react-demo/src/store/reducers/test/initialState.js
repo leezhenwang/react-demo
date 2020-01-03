@@ -1,6 +1,6 @@
 //初始的state值
 const initialState = {
-    isPartnerModalShow: false,
+  isPartnerModalShow: false,
 };
 
 export default initialState;

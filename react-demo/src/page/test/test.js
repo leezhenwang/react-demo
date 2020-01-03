@@ -3,7 +3,7 @@ import Customer from '../../component/customer/customer.js'
 import PartnerModal from '../../component/partnerModal/partnerModal.js'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { togglePartnerModal } from './redux/action.js';
+import { togglePartnerModal } from '../../store/reducers/test/action.js';
 
 class test extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class test extends Component {
 }
 
 function mapStateToProps(state) {
-  // console.log('state', state);
+  console.log('state', state);
 	return {
 		testState: state.testState,
 	};

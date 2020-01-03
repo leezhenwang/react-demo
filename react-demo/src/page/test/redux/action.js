@@ -1,1 +1,0 @@
-export { togglePartnerModal } from './togglePartnerModal';

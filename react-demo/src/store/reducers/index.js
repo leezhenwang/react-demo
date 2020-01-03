@@ -1,10 +1,7 @@
 import { combineReducers } from 'redux';
-import indexReducer from '../../page/index/redux/reducer.js'
-import testReducer from '../../page/test/redux/reducer.js'
+// import indexReducer from '../../page/index/redux/reducer.js'
+import testReducer from './test/reducer.js'
 
-const reducerMap = {
-  indexState: indexReducer,
+export default combineReducers({
   testState: testReducer,
-};
-
-export default combineReducers(reducerMap);
+});

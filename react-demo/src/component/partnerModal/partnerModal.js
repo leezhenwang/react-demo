@@ -3,7 +3,7 @@ import './partnerModal.css'
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { togglePartnerModal } from '../../page/test/redux/action';
+import { togglePartnerModal } from '../../store/reducers/test/action.js';
 
 class partnerModal extends Component {
   constructor(props, context) {
